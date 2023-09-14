@@ -5,5 +5,5 @@ phases:
       - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel STS 
   build:
     commands:
-      - dotnet restore netcore_api/netcore_api.csproj
-      - dotnet build netcore_api/netcore_api.csproj
+      - dotnet restore netcore_api.csproj
+      - dotnet build netcore_api.csproj

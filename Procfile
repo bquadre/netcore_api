@@ -1,0 +1,1 @@
+web: dotnet ./app/netcore_api.dll

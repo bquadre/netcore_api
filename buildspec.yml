@@ -3,7 +3,15 @@ phases:
   install:
     commands:
       - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel STS 
-  build:
+  pre_build:
     commands:
       - dotnet restore netcore_api.csproj
+  build:
+    commands:
       - dotnet build netcore_api.csproj
+  post_build:
+    commands:
+      -  dotnet publish -c Release -o ./app/ netcore_api.csproj
+  artifacts:
+    files:
+      - '**/*'

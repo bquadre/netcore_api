@@ -12,6 +12,6 @@ phases:
   post_build:
     commands:
       -  dotnet publish -c Release -o ./app/ netcore_api.csproj
-  artifacts:
+artifacts:
     files:
       - '**/*'
